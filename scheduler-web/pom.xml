@@ -116,6 +116,7 @@
 			<version>2.6</version>
 		</dependency>
 		
+		<!--  
 		<dependency>
        		<groupId>com.oracle.weblogic</groupId>
        		<artifactId>weblogic-server-pom</artifactId>
@@ -123,6 +124,7 @@
        		<type>pom</type>
        		<scope>provided</scope>
       </dependency>
+      -->
 
 	</dependencies>
 
