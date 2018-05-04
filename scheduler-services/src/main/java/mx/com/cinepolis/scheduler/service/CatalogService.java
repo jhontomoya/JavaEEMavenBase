@@ -23,4 +23,10 @@ public interface CatalogService {
      */
     List<CatalogsTO> getEstados(String pais);
 
+    /**
+     * Retorna la lista de los usuarios
+     * @return Lista de usuarios
+     */
+    List<UserTO> getAllUsers();
+
 }

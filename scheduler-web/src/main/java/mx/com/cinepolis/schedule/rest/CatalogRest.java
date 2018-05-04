@@ -73,7 +73,7 @@ public class CatalogRest {
     
     @GET
     @Produces("application/json")
-    @Path("/users/{login}")
+    @Path("/usersl/{login}")
     public Response getLogin(@PathParam("login") String login) {
     	GitHubUserTO gitHubUserTO = gitHubFacadeEJB.getUserLogin(login);
         return Response.ok().entity(gitHubUserTO).build();
@@ -98,6 +98,15 @@ public class CatalogRest {
     @Path("/alta")
     public Response setUserAdd(GitHubAddUserTO gitHubAddUserTO) {
     	return Response.ok().entity(gitHubAddUserTO).build();
+    }
+
+    @GET
+    @Produces("application/json")
+    @Path("/users")
+    public Response getAllUsers() {
+        List<UserTO> userTOList = catalogFacadeEJB.getAllUsers();
+        GenericEntity<List<UserTO>> entity = new GenericEntity<List<UserTO>>(userTOList) {};
+        return Response.ok().entity(entity).build();
     }
    
 }
