@@ -108,5 +108,13 @@ public class CatalogRest {
         GenericEntity<List<UserTO>> entity = new GenericEntity<List<UserTO>>(userTOList) {};
         return Response.ok().entity(entity).build();
     }
+
+    @POST
+    @Produces("application/json")
+    @Path("/altauser")
+    public Response setNewUser(UserTO userTO) {
+        UserTO userTO2 = catalogFacadeEJB.setNewUser(userTO);
+        return Response.ok().entity(userTO2).build();
+    }
    
 }

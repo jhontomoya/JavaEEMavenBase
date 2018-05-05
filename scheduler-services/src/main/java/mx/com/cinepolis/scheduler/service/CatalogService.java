@@ -29,4 +29,9 @@ public interface CatalogService {
      */
     List<UserTO> getAllUsers();
 
+    /**
+     * @return object
+     */
+    UserTO setNewUser (UserTO userTO);
+
 }
