@@ -91,4 +91,12 @@ public class CatalogServiceImpl implements CatalogService{
 		return userTO;
 	}
 
+	@Override
+	public boolean getUserId(Long id) {
+		if (id > 0){
+			userDAO.getById(id);
+			return true;
+		}
+		return false;
+	}
 }

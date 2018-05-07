@@ -34,4 +34,9 @@ public interface CatalogService {
      */
     UserTO setNewUser (UserTO userTO);
 
+    /**
+     * @return object
+     */
+    boolean getUserId (Long id);
+
 }

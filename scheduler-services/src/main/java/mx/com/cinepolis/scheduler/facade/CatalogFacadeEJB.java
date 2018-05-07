@@ -36,5 +36,9 @@ public class CatalogFacadeEJB {
         return catalogService.setNewUser(userTO);
     }
 
+    public  boolean getUserId (long id){
+        return  catalogService.getUserId(id);
+    }
+
 
 }

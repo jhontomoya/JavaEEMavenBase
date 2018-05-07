@@ -73,7 +73,7 @@ public class CatalogRest {
     
     @GET
     @Produces("application/json")
-    @Path("/usersl/{login}")
+    @Path("/userlogin/{login}")
     public Response getLogin(@PathParam("login") String login) {
     	GitHubUserTO gitHubUserTO = gitHubFacadeEJB.getUserLogin(login);
         return Response.ok().entity(gitHubUserTO).build();
@@ -115,6 +115,17 @@ public class CatalogRest {
     public Response setNewUser(UserTO userTO) {
         UserTO userTO2 = catalogFacadeEJB.setNewUser(userTO);
         return Response.ok().entity(userTO2).build();
+    }
+
+    @GET
+    @Produces("application/json")
+    @Path("/search")
+    //search?idUser=1
+    public Response getExistUserTO(@Context UriInfo ui) {
+        MultivaluedMap<String,String> queryParam = ui.getQueryParameters();
+        String idUser = queryParam.getFirst("idUser");
+        catalogFacadeEJB.getUserId((long) Integer.parseInt(idUser));
+        return Response.ok().entity(idUser).build();
     }
    
 }
