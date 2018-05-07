@@ -1,8 +1,10 @@
 mx\com\arquitectura\arquitectura\persistence\EntityManagerProvider.class
 mx\com\arquitectura\arquitectura\persistence\impl\BaseDAOImpl.class
 mx\com\arquitectura\arquitectura\persistence\DAOError.class
+mx\com\cinepolis\scheduler\data\persistence\dao\impl\UsuarioDAOImpl.class
 mx\com\cinepolis\scheduler\data\persistence\dao\UserDAO.class
 mx\com\cinepolis\scheduler\data\persistence\dao\impl\UserDAOImpl.class
+mx\com\cinepolis\scheduler\data\persistence\dao\UsuarioDAO.class
 mx\com\cinepolis\scheduler\data\persistence\constants\Constants.class
 mx\com\arquitectura\arquitectura\persistence\BaseDAOJPA.class
 mx\com\arquitectura\arquitectura\persistence\DAOException.class

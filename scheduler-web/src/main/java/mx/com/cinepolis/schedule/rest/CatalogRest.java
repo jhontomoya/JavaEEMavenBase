@@ -1,12 +1,9 @@
 package mx.com.cinepolis.schedule.rest;
 
-import mx.com.cinepolis.scheduler.commons.to.CatalogsTO;
-import mx.com.cinepolis.scheduler.commons.to.GitHubAddUserTO;
-import mx.com.cinepolis.scheduler.commons.to.GitHubUserTO;
-import mx.com.cinepolis.scheduler.commons.to.GitHubUserValidTO;
-import mx.com.cinepolis.scheduler.commons.to.UserTO;
+import mx.com.cinepolis.scheduler.commons.to.*;
 import mx.com.cinepolis.scheduler.facade.CatalogFacadeEJB;
 import mx.com.cinepolis.scheduler.facade.GitHubFacadeEJB;
+import mx.com.cinepolis.scheduler.facade.UserManagementFacadeEJB;
 
 import java.util.List;
 
@@ -32,6 +29,8 @@ public class CatalogRest {
     private CatalogFacadeEJB catalogFacadeEJB;
     @EJB
     private GitHubFacadeEJB gitHubFacadeEJB;
+    @EJB
+    private UserManagementFacadeEJB userManagementFacadeEJB;
 
 
     @GET
@@ -126,6 +125,15 @@ public class CatalogRest {
         String idUser = queryParam.getFirst("idUser");
         catalogFacadeEJB.getUserId((long) Integer.parseInt(idUser));
         return Response.ok().entity(idUser).build();
+    }
+
+    @GET
+    @Produces("application/json")
+    @Path("/prueba")
+    public Response getAllUsersPrueba() {
+        List<UsuarioTO> usuarioTOList = userManagementFacadeEJB.getAllUsers();
+        GenericEntity<List<UsuarioTO>> entity = new GenericEntity<List<UsuarioTO>>(usuarioTOList) {};
+        return Response.ok().entity(entity).build();
     }
    
 }

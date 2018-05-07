@@ -2,5 +2,8 @@ C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\mai
 C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\service\impl\CatalogServiceImpl.java
 C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\service\impl\GitHubServiceImpl.java
 C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\service\CatalogService.java
+C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\facade\UserManagementFacadeEJB.java
 C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\facade\GitHubFacadeEJB.java
+C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\service\impl\UserManagementServiceImpl.java
+C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\service\UserManagementService.java
 C:\Users\JAVA1\Documents\Repositorios\JavaEEMavenBase\scheduler-services\src\main\java\mx\com\cinepolis\scheduler\service\GitHubService.java
