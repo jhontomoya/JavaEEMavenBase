@@ -1,5 +1,6 @@
 package mx.com.cinepolis.scheduler.service;
 
+import mx.com.cinepolis.scheduler.commons.to.UserTO;
 import mx.com.cinepolis.scheduler.commons.to.UsuarioTO;
 
 import java.util.List;
@@ -14,10 +15,12 @@ public interface UserManagementService {
     /**
      * Retrona los datos del nuevo usuario
      * @return user
+     * @param
      */
-    UsuarioTO setUser (UsuarioTO usuarioTO);
+    UsuarioTO setNewUser (UsuarioTO userTO);
 
     List<UsuarioTO> getAllUsers();
+
 }
 
 

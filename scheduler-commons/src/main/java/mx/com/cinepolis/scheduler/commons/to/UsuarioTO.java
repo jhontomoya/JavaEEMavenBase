@@ -4,49 +4,49 @@ import java.io.Serializable;
 
 public class UsuarioTO implements Serializable {
 
-    private Long idUserTo;
-    private String userNameTo;
-    private String nameTo;
-    private String passwordTo;
-    private int idPermisoTo;
+    private Long idUser;
+    private String userName;
+    private String name;
+    private String password;
+    private int idPermiso;
 
-    public Long getIdUserTo() {
-        return idUserTo;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setIdUserTo(Long idUserTo) {
-        this.idUserTo = idUserTo;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
-    public String getUserNameTo() {
-        return userNameTo;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUserNameTo(String userNameTo) {
-        this.userNameTo = userNameTo;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getNameTo() {
-        return nameTo;
+    public String getName() {
+        return name;
     }
 
-    public void setNameTo(String nameTo) {
-        this.nameTo = nameTo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPasswordTo() {
-        return passwordTo;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswordTo(String passwordTo) {
-        this.passwordTo = passwordTo;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public int getIdPermisoTo() {
-        return idPermisoTo;
+    public int getIdPermiso() {
+        return idPermiso;
     }
 
-    public void setIdPermisoTo(int idPermisoTo) {
-        this.idPermisoTo = idPermisoTo;
+    public void setIdPermiso(int idPermiso) {
+        this.idPermiso = idPermiso;
     }
 }

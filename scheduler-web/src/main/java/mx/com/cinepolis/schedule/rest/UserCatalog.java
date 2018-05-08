@@ -1,6 +1,6 @@
 package mx.com.cinepolis.schedule.rest;
 
-
+import mx.com.arquitectura.base.model.UsuarioDO;
 import mx.com.cinepolis.scheduler.commons.to.UsuarioTO;
 import mx.com.cinepolis.scheduler.facade.UserManagementFacadeEJB;
 
@@ -26,7 +26,7 @@ public class UserCatalog {
     @GET
     @Produces("application/json")
     @Path("/login")
-    public Response getState(@Context UriInfo ui) {
+    public Response getUser(@Context UriInfo ui) {
         //login?usr=jhonn&pwd=123
         MultivaluedMap<String, String> queryParams = ui.getQueryParameters();
         String usr = queryParams.getFirst("usr");
@@ -36,12 +36,21 @@ public class UserCatalog {
 
         return Response.ok().entity(usuarioTO).build();
     }
+
+    @POST
+    @Produces("application/json")
+    @Path("/add")
+    public Response setNewUser(UsuarioTO userTO) {
+        UsuarioTO userTO2 = userManagementFacadeEJB.setNewUser(userTO);
+        return Response.ok().entity(userTO2).build();
+    }
+
     @GET
     @Produces("application/json")
     @Path("/users")
     public Response getAllUsers() {
-        List<UsuarioTO> userTOList = userManagementFacadeEJB.getAllUsers();
-        GenericEntity<List<UsuarioTO>> entity = new GenericEntity<List<UsuarioTO>>(userTOList) {};
+        List<UsuarioTO> usuarioTOList = userManagementFacadeEJB.getAllUsers();
+        GenericEntity<List<UsuarioTO>> entity = new GenericEntity<List<UsuarioTO>>(usuarioTOList) {};
         return Response.ok().entity(entity).build();
     }
 

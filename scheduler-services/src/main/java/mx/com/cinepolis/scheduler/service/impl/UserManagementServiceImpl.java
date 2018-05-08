@@ -6,7 +6,6 @@ import mx.com.cinepolis.scheduler.data.persistence.dao.UsuarioDAO;
 import mx.com.cinepolis.scheduler.service.UserManagementService;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,31 +16,31 @@ public class UserManagementServiceImpl implements UserManagementService {
 
     @Override
     public UsuarioTO getUser(String usuario, String password) {
-        //userDAO.findByColumn()
-        return null;
+        UsuarioTO usuarioTO = userDAO.getByColumn("usuario",UsuarioDO.class,usuario);
+        return usuarioTO;
     }
 
     @Override
-    public UsuarioTO setUser(UsuarioTO usuarioTO) {
-        UsuarioDO usuarioDO = new UsuarioDO();
-        usuarioDO.setNombreDo(usuarioTO.getNameTo());
-        usuarioDO.setUsuarioDo(usuarioTO.getUserNameTo());
-        usuarioDO.setPasswordDo(usuarioTO.getPasswordTo());
-        usuarioDO.setIdPermisoDo(usuarioTO.getIdPermisoTo());
-        userDAO.create(usuarioDO);
-        return usuarioTO;
+    public UsuarioTO setNewUser(UsuarioTO userTO) {
+        UsuarioDO userDO1 = new UsuarioDO();
+        userDO1.setNombre(userTO.getName());
+        userDO1.setUsuario(userTO.getUserName());
+        userDO1.setPwd(userTO.getPassword());
+        userDO1.setIdPermiso(userTO.getIdPermiso());
+        userDAO.create(userDO1);
+        return userTO;
     }
 
     @Override
     public List<UsuarioTO> getAllUsers() {
         List<UsuarioDO> userDOList = userDAO.findAll();
-
         return userDOList.stream().map(x -> new UsuarioTO() {{
-            setIdUserTo(x.getIdUserDo());
-            setNameTo(x.getNombreDo());
-            setUserNameTo(x.getUsuarioDo());
-            setPasswordTo(x.getPasswordDo());
-            setIdPermisoTo(x.getIdPermisoDo());
+            setIdUser(x.getIdUser());
+            setName(x.getNombre());
+            setUserName(x.getUsuario());
+            setPassword(x.getPwd());
+            setIdPermiso(x.getIdPermiso());
         }}).collect(Collectors.toList());
     }
+
 }

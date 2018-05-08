@@ -19,9 +19,9 @@ public class UserManagementFacadeEJB {
         return userManagementService.getUser(user,password);
     }
 
-    public  UsuarioTO setUser (UsuarioTO usuarioTO){
+    public UsuarioTO setNewUser(UsuarioTO userTO){
 
-        return  userManagementService.setUser(usuarioTO);
+        return userManagementService.setNewUser(userTO);
     }
     public List<UsuarioTO> getAllUsers (){
 

@@ -6,59 +6,59 @@ import javax.persistence.*;
 @Table(name = "K_USER")
 public class UsuarioDO {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PK_USER")
-    private Long idUserDo;
+    private Long idUser;
 
     @Column(name = "USUARIO")
-    private String usuarioDo;
+    private String usuario;
 
     @Column(name = "NOMBRE")
-    private String nombreDo;
+    private String nombre;
 
-    @Column(name = "PDW")
-    private String passwordDo;
+    @Column(name = "PWD")
+    private String pwd;
 
     @Column(name = "ID_PERMISO")
-    private int idPermisoDo;
+    private int idPermiso;
 
-    public Long getIdUserDo() {
-        return idUserDo;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setIdUserDo(Long idUserDo) {
-        this.idUserDo = idUserDo;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
-    public String getUsuarioDo() {
-        return usuarioDo;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarioDo(String usuarioDo) {
-        this.usuarioDo = usuarioDo;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
-    public String getNombreDo() {
-        return nombreDo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreDo(String nombreDo) {
-        this.nombreDo = nombreDo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getPasswordDo() {
-        return passwordDo;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setPasswordDo(String passwordDo) {
-        this.passwordDo = passwordDo;
+    public void setPwd(String password) {
+        this.pwd = password;
     }
 
-    public int getIdPermisoDo() {
-        return idPermisoDo;
+    public int getIdPermiso() {
+        return idPermiso;
     }
 
-    public void setIdPermisoDo(int idPermisoDo) {
-        this.idPermisoDo = idPermisoDo;
+    public void setIdPermiso(int idPermiso) {
+        this.idPermiso = idPermiso;
     }
 }
